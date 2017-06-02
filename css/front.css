@@ -1,0 +1,50 @@
+/* 
+MAIN STYLESHEET
+Author: Zimit Media
+*/
+
+
+/* ========================================= */
+/* BANNER                                    */
+/* ========================================= */
+
+
+/*==============================*/
+/* MEDIA QUERIES                */
+/*==============================*/
+
+/*
+SMALL ONLY <640px
+*/
+@media screen and (max-width: 39.9375em) {
+
+}
+
+/*
+MEDIUM ONLY <1024px and >=640px
+*/
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+}
+
+/*
+MEDIUM BELOW <1024px
+*/
+
+@media screen and (max-width: 63.9375em) {
+
+}
+
+/*
+LARGE AND UP >=1024px
+*/
+@media screen and (min-width: 64em) {
+
+}
+
+/*
+LARGE ONLY
+*/
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+
+}
