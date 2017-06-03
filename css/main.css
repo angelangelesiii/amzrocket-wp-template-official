@@ -3,15 +3,45 @@ MAIN STYLESHEET
 Author: Zimit Media
 */
 
-
 /* ========================================= */
-/* BANNER                                    */
+/* STRUCTURE                                 */
 /* ========================================= */
 
 body {
   font-family: 'Open Sans', sans-serif;  
   
 }
+
+/*Clearfix*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+
+/*Wrapper*/
+.wrapper {
+	width: 100%;
+	max-width: 972px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.wrapper-medium {
+	width: 100%;
+	max-width: 1322px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.wrapper-big {
+	width: 100%;
+	max-width: 1622px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
 
 /*==============================*/
 /* MEDIA QUERIES                */
