@@ -8,6 +8,10 @@ Author: Zimit Media
 /* BANNER                                    */
 /* ========================================= */
 
+body {
+  font-family: 'Open Sans', sans-serif;  
+  
+}
 
 /*==============================*/
 /* MEDIA QUERIES                */
