@@ -14,11 +14,15 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amzrocket' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'amzrocket' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'amzrocket' ), 'amzrocket', '<a href="https://automattic.com/" rel="designer">Zimit Media</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="footer-menu-container">
+			
+		</div>
+		<div class="copy">
+			<div class="wrapper">
+				&copy; <?php echo date("Y"); ?> <a href="/">AMZ Rocket</a>, Powered by <a href="http://zimitmedia.com" target="_blank">Zimit Media</a><br/>
+				Amazon and the Amazon Logo are both trademarks of Amazon.com, Inc.
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
