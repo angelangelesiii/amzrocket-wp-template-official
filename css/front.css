@@ -5,8 +5,121 @@ Author: Zimit Media
 
 
 /* ========================================= */
-/* BANNER                                    */
+/* HERO                                      */
 /* ========================================= */
+
+.hero-section {
+	background-image: url('../assets/images/amzbg_b.jpg');
+	background-size: cover;
+	background-position: center center;
+	min-height: 500px;
+	color: #FFFFFF;
+}
+.hero-section .hero-content {
+	text-align: center;
+	padding: 170px 0;
+}
+.hero-section .hero-content .headline {
+	font-size: 4em;
+	margin: 0;
+	line-height: 1em;
+	font-weight: 100;
+}
+.hero-section .hero-content .subline {
+	font-size: 1.5em;
+	margin: 10px 0 40px;
+	font-weight: 100;
+}
+
+
+/* ========================================= */
+/* ICONS                                     */
+/* ========================================= */
+
+.icons {
+	padding: 60px;
+}
+.icons .content {
+	text-align: center;
+}
+.icons .content .fa {
+	font-size: 6.2em;
+	color: #E80027;
+}
+.icons .content h2 {
+	font-weight: 100;
+	font-size: 3.5em;
+	margin: 0;
+}
+.icons .content h3 {
+	margin: 1.75em 0 1em;
+	font-size: 1.4em;
+}
+.icons .content .subline {
+	font-size: 1.4em;
+	margin: 0 0 50px;
+	font-weight: 100;
+}
+.icons .content .column p {
+	font-size: 1.2em;
+	font-weight: 100;
+}
+
+
+/* ========================================= */
+/* HALF COLUMNS                              */
+/* ========================================= */
+
+.half-columns {
+	display: table;
+	width: 100%;
+}
+.half-columns-table {
+	margin: 0;
+}
+.half-columns .half-column-row {
+	/*background: #F0F0F0;*/
+	display: table-row;
+}
+.half-columns .half-column-row .column {
+	display: table-cell;
+	min-height: 500px;
+	width: 50%;
+}
+.half-columns .half-column-row .text {
+	/*text-align: center;*/
+	height: 100%;
+	position: relative;
+}
+.half-columns .half-column-row .text .content {
+	max-width: 650px;
+	width: 100%;
+	padding: 20px 40px 0;
+	font-weight: 100;
+	/*position: absolute;*/
+	/*top: 50%;*/
+	/*transform: translateY(-50%);*/
+}
+.half-columns .half-column-row .text .content h2 {
+	color: #E80027;
+	font-size: 2.7em;
+	font-weight: 100;
+	margin-bottom: 20px;
+}
+.half-columns .half-column-row .text .content p {
+	font-size: 1.2em;
+}
+.half-columns .half-column-row:nth-of-type(even) .text .content {
+	margin: 0 0 0 auto;
+	text-align: right;
+}
+.half-columns .half-column-row:nth-of-type(odd) .text .content {
+	margin: 0 auto 0 0;
+}
+.half-columns .half-column-row .image {
+	background-size: cover !important;
+	background-position: center center !important
+}
 
 
 /*==============================*/
