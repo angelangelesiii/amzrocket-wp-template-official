@@ -163,6 +163,9 @@ function amzrocket_scripts() {
 	wp_enqueue_style( 'main', get_template_directory_uri().'/css/main.css' );
 	if (is_front_page()) wp_enqueue_style( 'front', get_template_directory_uri().'/css/front.css' );
 
+	// SlickJS CSS
+	wp_enqueue_style( 'slick-css', get_template_directory_uri().'/css/slick.css' );
+
 
 	// ============ JAVASCRIPT
 	wp_enqueue_script( 'amzrocket-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
