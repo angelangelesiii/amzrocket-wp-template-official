@@ -44,7 +44,8 @@ function amzrocket_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'main-header' => esc_html__( 'Main Header', 'amzrocket' ),
+		'main-header' => esc_html__( 'Main Header Menu', 'amzrocket' ),
+		'main-footer' => esc_html__( 'Main Footer Menu', 'amzrocket' ),
 	) );
 
 	/*
@@ -115,7 +116,7 @@ function amzrocket_scripts() {
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/css/fa/css/font-awesome.min.css' );
 
 	// Google Fonts
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,900' );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Overpass:200,300,400,700,900' );
 
 	// Foundation Grid
 	wp_enqueue_style( 'foundation', get_template_directory_uri().'/css/foundation.css' );
@@ -148,6 +149,9 @@ function amzrocket_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// SlickJS
+	wp_enqueue_script( 'slick-js', get_template_directory_uri().'/js/slick.min.js', false, false, true );
 }
 add_action( 'wp_enqueue_scripts', 'amzrocket_scripts' );
 
