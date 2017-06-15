@@ -7,6 +7,44 @@
  * @package AMZ_Rocket_Official
  */
 
+// ACF PRO SETUP
+
+// include_once('advanced-custom-fields/acf.php');
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+// 1. customize ACF path
+add_filter('acf/settings/path', 'my_acf_settings_path');
+function my_acf_settings_path( $path ) {
+     // update path
+    $path = get_stylesheet_directory() . '/advanced-custom-fields-pro/';
+    // return
+    return $path;
+}
+ 
+// 2. customize ACF dir
+add_filter('acf/settings/dir', 'my_acf_settings_dir');
+function my_acf_settings_dir( $dir ) {
+    // update path
+    $dir = get_stylesheet_directory_uri() . '/advanced-custom-fields-pro/';
+    // return
+    return $dir;
+}
+
+// 3. Hide ACF field group menu item
+// add_filter('acf/settings/show_admin', '__return_false');
+
+// 4. Include ACF
+include_once( get_stylesheet_directory() . '/advanced-custom-fields-pro/acf.php' );
+
+// Google Maps API key
+function my_acf_init() {
+	acf_update_setting('google_api_key', 'AIzaSyBPL_70m6Amg9Tej-BHQVE0fZons4Jl1PY');
+}
+
+add_action('acf/init', 'my_acf_init');
+
+// END ACF SETUP
+
 if ( ! function_exists( 'amzrocket_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -179,3 +217,22 @@ require get_template_directory() . '/inc/extras.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+// ===========================================
+// ACF Pro Options Page Instantiate
+// ===========================================
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Site Options',
+		'menu_title'	=> 'Site Options',
+		'menu_slug' 	=> 'site-options',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-analytics',
+		'position'		=> '60'
+	));
+	
+}
