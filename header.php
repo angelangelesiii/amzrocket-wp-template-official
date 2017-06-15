@@ -23,27 +23,24 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'amzrocket' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+	<header id="mainheader" class="site-header top-position <?php if(is_front_page) echo 'is-front-page'; ?>">
+		<nav class="wrapper-big site-nav clearfix">
+			
+			<div class="logo-container">
+				<a href="<?php home_url(); ?>" class="logo-link">
+					<img src="<?php echo get_template_directory_uri()."/assets/images/amzrocket-white-red-s.png" ?>" alt="AMZ Rocket" class="logo-main" title="AMZ Rocket">
+				</a>
+			</div>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+			<div class="menu-container">
+				<?php
+				wp_nav_menu( array( 'theme_location' => 'main-header', 'menu_id' => 'main-nav-menu', 'depth' => '2' ) );
+				?>
+			</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'amzrocket' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		</nav>
+	</header>
+
+	
 
 	<div id="content" class="site-content">
