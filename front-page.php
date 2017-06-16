@@ -88,7 +88,7 @@ get_header(); ?>
 				</table>
 			</section>
 
-			<?php get_template_part('modules/fp-testimonial'); ?>
+			<?php get_template_part('modules/fp-testimonials'); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

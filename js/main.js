@@ -11,6 +11,11 @@ jQuery(document).ready(function($){ // Document Ready
 
 	var mainController = new ScrollMagic.Controller();
 
+
+	// ===================================================
+	//  NAVBAR SCENE
+	// ===================================================
+
 	var NavBarScroll = new ScrollMagic.Scene({
 		triggerElement: '.hero',
 		offset: 50,
@@ -25,5 +30,41 @@ jQuery(document).ready(function($){ // Document Ready
 	// .addIndicators()
 	.addTo(mainController);
 	
+
+	// ===================================================
+	//  SLICK INIT
+	// ===================================================
+
+	$('.testimonials').slick({
+		speed: 1000,
+		centerMode: false,
+		slidesToShow: 1,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 8000,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+
+		// BREAKPOINTS
+		responsive: [
+			// Medium (<1024)
+			{
+				breakpoint: 1023,
+				settings: {
+					slidesToShow: 1,
+					centerMode: false
+				}
+			},
+			// Small (<640)
+			{
+				breakpoint: 639,
+				settings: {
+					slidesToShow: 1,
+					centerMode: false
+				}
+			}
+		]
+		// END BREAKPOINTS
+	});
 
 });
