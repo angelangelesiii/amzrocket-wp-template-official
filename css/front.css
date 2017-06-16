@@ -122,6 +122,60 @@ Author: Zimit Media
 }
 
 
+/* ========================================= */
+/* TESTIMONIALS                              */
+/* ========================================= */
+
+.testimonials-section {
+	padding: 50px 0;
+	background: #870017;
+	color: #FFFFFF
+}
+.testimonials-section > h2 {
+	font-weight: 100;
+	font-size: 2.7em;
+	text-align: center;
+	margin: 0;
+}
+
+/*Slider*/
+.testimonials {
+	overflow: hidden;
+	max-width: 900px;
+	margin: 0 auto;
+}
+.testimonials .testimonial-container {
+	text-align: center;
+	padding: 0 30px;
+	outline: none;
+}
+.testimonials .testimonial-container .testimonial-photo {
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	border-radius: 50%;
+	overflow: hidden;
+	background-size: cover !important;
+	border: 2px solid #FFFFFF;
+}
+.testimonials .testimonial-container .testimonial-message {
+	font-style: italic;
+	font-size: 1.5em;
+}
+.testimonials .testimonial-container cite {
+	font-style: normal;
+	font-weight: 100;
+}
+.testimonials .testimonial-container cite .name {
+	font-size: 1.2em;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+.testimonials .testimonial-container cite .job-title {
+	font-size: 0.9em;
+}
+
+
 /*==============================*/
 /* MEDIA QUERIES                */
 /*==============================*/
