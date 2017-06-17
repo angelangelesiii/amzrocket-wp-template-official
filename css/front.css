@@ -135,7 +135,7 @@ Author: Zimit Media
 	font-weight: 100;
 	font-size: 2.7em;
 	text-align: center;
-	margin: 0 0 0.5em;
+	margin: 0;
 }
 
 /*Slider*/
@@ -161,7 +161,6 @@ Author: Zimit Media
 .testimonials .testimonial-container .testimonial-message {
 	font-style: italic;
 	font-size: 1.5em;
-	font-weight: 100;
 }
 .testimonials .testimonial-container cite {
 	font-style: normal;
