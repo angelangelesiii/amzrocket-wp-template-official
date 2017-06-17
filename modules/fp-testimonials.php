@@ -3,7 +3,7 @@
 <?php if (have_rows('testimonials', 'options')): ?>
 
 <section class="testimonials-section">
-	<h2>Join the hundreds who are satisfied</h2>
+	<h2>Join the hundreds who are satisfied with our services!</h2>
 
 	<div class="testimonials">
 
