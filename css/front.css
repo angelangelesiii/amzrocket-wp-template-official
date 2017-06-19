@@ -75,6 +75,7 @@ Author: Zimit Media
 .half-columns {
 	display: table;
 	width: 100%;
+	overflow: hidden;
 }
 .half-columns-table {
 	margin: 0;
@@ -104,12 +105,12 @@ Author: Zimit Media
 }
 .half-columns .half-column-row .text .content h2 {
 	color: #E80027;
-	font-size: 2.7em;
+	font-size: 2.8em;
 	font-weight: 100;
 	margin-bottom: 20px;
 }
 .half-columns .half-column-row .text .content p {
-	font-size: 1.2em;
+	font-size: 1.3em;
 }
 .half-columns .half-column-row:nth-of-type(even) .text .content {
 	margin: 0 0 0 auto;
