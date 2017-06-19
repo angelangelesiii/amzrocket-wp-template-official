@@ -90,6 +90,8 @@ get_header(); ?>
 
 			<?php get_template_part('modules/fp-testimonials'); ?>
 
+			<?php get_template_part('modules/fp-packages'); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
