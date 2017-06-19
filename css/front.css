@@ -180,6 +180,89 @@ Author: Zimit Media
 }
 
 
+/* ========================================= */
+/* SHOWCASES and PRODUCTS                    */
+/* ========================================= */
+
+.showcases {
+	padding: 80px 0;
+	overflow: hidden;
+}
+.showcase {
+	text-align: center;
+	font-weight: 100;
+}
+.showcase .showcase-title {
+	font-size: 2.5em;
+	font-weight: 100;
+	color: #E80027;
+	margin: 0;
+	line-height: 1em;
+}
+.showcase .showcase-description p {
+	font-size: 1.3em;
+}
+.showcase .showcase-description p:first-of-type {
+	margin-top: 10px;
+}
+
+/*Products*/
+.showcase .products {
+	display: flex;
+	align-content: stretch;
+	padding: 10px 0;
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+.showcase .products .product {
+	border: 3px solid;
+	border-color: #515151;
+	margin: 0 5px;
+	padding: 0 0 41px;
+	position: relative;
+	border-radius: 6px;
+	overflow: hidden;
+}
+.showcase .products .product.highlighted-product {
+	border-color: #E80027;
+	margin: -10px 5px;
+}
+.showcase .products .product .product-title {
+	background: #515151;
+	color: #FFFFFF;
+	font-size: 1.5em;
+	margin: 0;
+	padding: 20px 0 0;
+	font-weight: 100;
+}
+.showcase .products .product .product-price {
+	background: #515151;
+	color: #FFFFFF;
+	font-size: 2.9em;
+	margin: 0;
+	padding: 5px 0 10px;
+	font-weight: 400;
+}
+.showcase .products .product.highlighted-product .product-title,
+.showcase .products .product.highlighted-product .product-price {
+	background: #E80027;
+}
+.showcase .products .product .product-description {
+	font-size: 1.1em;
+	padding: 20px 15px;
+}
+.showcase .products .product .product-link {
+	position: absolute;
+	bottom: 20px;
+	height: 41px;
+	width: 100%;
+	left: 0;
+}
+
+
+
+
 /*==============================*/
 /* MEDIA QUERIES                */
 /*==============================*/
