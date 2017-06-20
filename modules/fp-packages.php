@@ -30,6 +30,7 @@
 			<?php endfor; ?>
 		
 		</div>
+		<div class="showcase-note"><?php the_sub_field('showcase_notes') ?></div>
 	</div>
 
 	<?php endwhile; ?>

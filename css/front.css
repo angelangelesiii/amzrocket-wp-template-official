@@ -191,6 +191,10 @@ Author: Zimit Media
 .showcase {
 	text-align: center;
 	font-weight: 100;
+	margin-bottom: 70px;
+}
+.showcase:last-of-type {
+	margin-bottom: 0;
 }
 .showcase .showcase-title {
 	font-size: 2.5em;
@@ -204,6 +208,9 @@ Author: Zimit Media
 }
 .showcase .showcase-description p:first-of-type {
 	margin-top: 10px;
+}
+.showcase .showcase-note p {
+	font-style: italic;
 }
 
 /*Products*/
@@ -221,7 +228,7 @@ Author: Zimit Media
 	margin: 0 5px;
 	padding: 0 0 41px;
 	position: relative;
-	border-radius: 6px;
+	border-radius: 4px;
 	overflow: hidden;
 }
 .showcase .products .product.highlighted-product {
