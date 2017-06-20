@@ -32,6 +32,11 @@
 				</a>
 			</div>
 
+			<div class="contact-info-container">
+				<span class="contact-phone contact-info"><a href="tel:+4911122233344"><i class="fa fa-phone" aria-hidden="true"></i> +49 111 222 333 44</a></span>
+				<span class="contact-email contact-info"><a href="mailto:anfrage@amz-rocket.de"><i class="fa fa-envelope" aria-hidden="true"></i> Anfrage</a></span>
+			</div><br/>
+
 			<div class="menu-container">
 				<?php
 				wp_nav_menu( array( 'theme_location' => 'main-header', 'menu_id' => 'main-nav-menu', 'depth' => '2' ) );
@@ -41,6 +46,6 @@
 		</nav>
 	</header>
 
-	
+	<div class="position-marker" id="top"></div>
 
 	<div id="content" class="site-content">
