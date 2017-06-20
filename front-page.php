@@ -31,17 +31,17 @@ get_header(); ?>
 					<h2>Launch <span style="color: #E80027;">higher</span> today!</h2>
 					<p class="subline">Our steps are way simpler and efficient than the competition.</p>
 					<div class="row">
-						<div class="column medium-4 small-12">
+						<div class="column medium-4 small-12 icon icon-1">
 							<i class="fa fa-list-ol" aria-hidden="true"></i>
 							<h3>Listing Optimization</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non nisi iste, molestiae ipsa aperiam veniam.</p>
 						</div>
-						<div class="column medium-4 small-12">
+						<div class="column medium-4 small-12 icon icon-2">
 							<i class="fa fa-amazon" aria-hidden="true"></i>
 							<h3>Amazon PPC</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat qui incidunt ab sequi sit laborum ratione magnam consequatur!</p>
 						</div>
-						<div class="column medium-4 small-12">
+						<div class="column medium-4 small-12 icon icon-3">
 							<i class="fa fa-search-plus" aria-hidden="true"></i>
 							<h3>Amazon SEO</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum est rerum, delectus.</p>
