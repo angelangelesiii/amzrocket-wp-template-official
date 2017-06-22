@@ -27,7 +27,7 @@
 		<nav class="wrapper-big site-nav clearfix">
 			
 			<div class="logo-container">
-				<a href="<?php home_url(); ?>" class="logo-link">
+				<a href="<?php echo home_url(); ?>" class="logo-link">
 					<img src="<?php echo get_template_directory_uri()."/assets/images/amzrocket-white-red-s.png" ?>" alt="AMZ Rocket" class="logo-main" title="AMZ Rocket">
 				</a>
 			</div>
@@ -49,3 +49,11 @@
 	<div class="position-marker" id="top"></div>
 
 	<div id="content" class="site-content">
+
+	<?php if(is_single() || is_page()): ?>
+
+		<div class="header-background" style="background-image: url('<?php echo get_template_directory_uri().'/assets/images/amzbg_b.jpg' ?>');">
+			
+		</div>
+
+	<?php endif; ?>
