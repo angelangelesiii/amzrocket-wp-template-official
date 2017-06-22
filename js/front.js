@@ -23,7 +23,7 @@ jQuery(document).ready(function($){ // Document Ready
 		autoAlpha: 0,
 		ease: Power3.easeOut
 	}, 0.5))
-	.addIndicators()
+	// .addIndicators()
 	.addTo(fpController);
 
 
