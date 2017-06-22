@@ -225,6 +225,7 @@ Author: Zimit Media
 .showcase .products .product {
 	border: 3px solid;
 	border-color: #515151;
+	background-color: #FFFFFF;
 	margin: 0 5px;
 	padding: 0 0 41px;
 	position: relative;
