@@ -26,6 +26,8 @@
 
 	<header id="mainheader" class="site-header top-position <?php if(is_front_page) echo 'is-front-page'; ?>">
 		<nav class="wrapper-big site-nav clearfix">
+
+			<button class="mobile-element mobile-menu hide-for-large-only"><i class="fa fa-bars" aria-hidden="true"></i></button>
 			
 			<div class="logo-container">
 				<a href="<?php echo home_url(); ?>" class="logo-link">
@@ -33,12 +35,12 @@
 				</a>
 			</div>
 
-			<div class="contact-info-container">
+			<div class="contact-info-container show-for-large-only">
 				<span class="contact-phone contact-info"><a href="tel:+4911122233344"><i class="fa fa-phone" aria-hidden="true"></i> +49 111 222 333 44</a></span>
 				<span class="contact-email contact-info"><a href="mailto:anfrage@amz-rocket.de"><i class="fa fa-envelope" aria-hidden="true"></i> Anfrage</a></span>
 			</div><br/>
 
-			<div class="menu-container">
+			<div class="menu-container show-for-large-only">
 				<?php
 				wp_nav_menu( array( 'theme_location' => 'main-header', 'menu_id' => 'main-nav-menu', 'depth' => '2' ) );
 				?>
@@ -49,9 +51,15 @@
 
 	<div class="position-marker" id="top"></div>
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content 
+	<?php 
+	if (is_single()) echo "is-single";
+	if (is_page()) echo "is-page";
+	if (get_post_format() == 'product') echo "is-product";
+	?>
+	">
 
-	<?php if(is_single() || is_page()): ?>
+	<?php if(!is_front_page() && (is_single() || is_page())): ?>
 
 		<div class="header-background" style="background-image: url('<?php echo get_template_directory_uri().'/assets/images/amzbg_b.jpg' ?>');">
 			

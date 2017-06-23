@@ -190,6 +190,18 @@ span.title-em {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+/*Mobile Menu*/
+#mainheader button.mobile-menu {
+	border: none;
+	outline: none !important;
+	background: none;
+	padding: 0;
+	margin: 5px 5px 0;
+	color: #FFFFFF;
+	font-size: 1.6em;
+	float: left;
+}
+
 /*Spacer*/
 .spacer {
 	height: 57px;
@@ -254,13 +266,32 @@ SMALL ONLY <640px
 */
 @media screen and (max-width: 39.9375em) {
 
+	/*Header*/
+	#mainheader .logo-main {
+		max-height: 32px;
+	}
+
+	/*Half Columns*/
+	.half-columns .half-column-row .image {
+		width: 0 !important;
+	}
+	.half-columns .half-column-row .text {
+		width: 100% !important;
+	}
+	.half-columns .half-column-row .text .content {
+		text-align: center !important;
+	}
+
 }
 
 /*
 MEDIUM ONLY <1024px and >=640px
 */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-
+	#mainheader button.mobile-menu {
+		font-size: 2em;
+		margin: 5px 10px 0;
+	}
 }
 
 /*
@@ -269,6 +300,17 @@ MEDIUM BELOW <1024px
 
 @media screen and (max-width: 63.9375em) {
 
+	/*Header*/
+	#mainheader nav.site-nav {
+		padding: 10px 10px;
+		text-align: left;
+	}
+	#mainheader .logo-container {
+		float: none;
+	}
+	#mainheader.top-position .logo-container {
+		margin: 0;
+	}
 }
 
 /*
