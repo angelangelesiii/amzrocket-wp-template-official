@@ -9,7 +9,7 @@ Author: Zimit Media
 
 body {
   font-family: 'Overpass', sans-serif;  
-  background: #F3F3F3;
+  background: #F1F1F1;
   color: #3F3F3F;
 }
 
@@ -45,6 +45,9 @@ body {
 
 a {
 	text-decoration: none;
+	outline: none;
+}
+a:focus {
 	outline: none;
 }
 
