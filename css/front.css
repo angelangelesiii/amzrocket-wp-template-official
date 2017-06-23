@@ -281,7 +281,20 @@ Author: Zimit Media
 SMALL ONLY <640px
 */
 @media screen and (max-width: 39.9375em) {
+	/*Icons*/
+	.icons {
+		padding: 60px 30px;
+	}
 
+	/*Showcase*/
+	.showcase .products {
+		display: block;
+		padding: 20px;
+	}
+	.showcase .products .product,
+	.showcase .products .product.highlighted-product {
+		margin: 10px 0;
+	}
 }
 
 /*
