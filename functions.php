@@ -83,6 +83,7 @@ function amzrocket_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'main-header' => esc_html__( 'Main Header Menu', 'amzrocket' ),
+		'mobile-header' => esc_html__( 'Mobile Header Menu', 'amzrocket' ),
 		'main-footer' => esc_html__( 'Main Footer Menu', 'amzrocket' ),
 	) );
 
