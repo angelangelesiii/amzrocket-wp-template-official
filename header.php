@@ -51,6 +51,49 @@
 			</div>
 
 			<!-- Main Mobile Menu -->
+			<div class="mobile-element mobile-menu-pane hide-for-large menu-closed" id="mobileMenuPane">
+				<div class="mobile-menu-buttons-container">
+
+				<?php // Tap to call button
+				if(get_field('general_phone_mobile_show', 'options')): ?>
+					<a href="
+					<?php 
+					if(get_field('general_phone', 'options')): 
+						echo 'tel:'.get_field('general_phone', 'options'); 
+					else:
+						echo '#';
+					endif;
+					?>
+					" class="btn mobile-btn">
+						<i class="fa fa-phone" aria-hidden="true"></i> Tap To Call
+					</a>
+				<?php endif; ?>
+
+				<?php // Email inquiry mobile button 
+				if(get_field('general_email_mobile_show', 'options')): ?>
+					<a href="
+					<?php 
+					if(get_field('general_email', 'options')): 
+						echo 'mailto:'.get_field('general_email', 'options'); 
+					else:
+						echo '#';
+					endif;
+					?>
+					" class="btn mobile-btn">
+						<i class="fa fa-envelope" aria-hidden="true"></i> Anfrage
+					</a>
+				<?php endif; ?>
+
+				</div>
+				<div class="mobile-menu-menu-container">
+					<?php
+					wp_nav_menu( array( 'theme_location' => 'mobile-header', 'menu_id' => 'main-mobile-menu', 'depth' => '2' ) );
+					?>
+				</div>
+
+				<button class="mobile-menu-close-button"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+			</div>
+
 		</nav>
 	</header>
 

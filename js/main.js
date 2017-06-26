@@ -29,6 +29,19 @@ jQuery(document).ready(function($){ // Document Ready
 	})
 	// .addIndicators()
 	.addTo(mainController);
+
+
+	// ===================================================
+	//  MOBILE MENU
+	// ===================================================
+
+	$('#mainheader button.mobile-menu').on('click', function(e) {
+		$('#mobileMenuPane').removeClass('menu-closed');
+	});
+
+	$('#mobileMenuPane button.mobile-menu-close-button').on('click', function(e) {
+		$('#mobileMenuPane').addClass('menu-closed');
+	});
 	
 
 	// ===================================================
