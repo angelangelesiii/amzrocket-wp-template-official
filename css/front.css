@@ -13,13 +13,19 @@ Author: Zimit Media
 	background-size: cover;
 	background-position: center center;
 	min-height: 520px;
+	max-height: 890px;
 	height: 100vh;
 	width: 100%;
 	color: #FFFFFF;
+	position: relative;
 }
 .hero-section .hero-content {
 	text-align: center;
 	padding: 170px 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .hero-section .hero-content .headline {
 	font-size: 4em;
@@ -130,7 +136,7 @@ Author: Zimit Media
 /* ========================================= */
 
 .testimonials-section {
-	padding: 50px 0;
+	padding: 50px 10px;
 	background: #870017;
 	color: #FFFFFF
 }
@@ -281,9 +287,28 @@ Author: Zimit Media
 SMALL ONLY <640px
 */
 @media screen and (max-width: 39.9375em) {
+	/*Hero Banner*/
+	.hero-section .hero-content .headline {
+		font-size: 3.5em;
+		line-height: 1.3em;
+	}
+
 	/*Icons*/
 	.icons {
 		padding: 60px 30px;
+	}
+	.icons .content h2 {
+		font-size: 3.2em;
+		line-height: 1.3em;
+	}
+	
+	/*Testimonials Section*/
+	.testimonials-section > h2 {
+		font-size: 2.4em;
+		line-height: 1.3em;
+	}
+	.testimonials .testimonial-container .testimonial-message {
+		font-size: 1.3em;
 	}
 
 	/*Showcase*/
@@ -294,6 +319,9 @@ SMALL ONLY <640px
 	.showcase .products .product,
 	.showcase .products .product.highlighted-product {
 		margin: 10px 0;
+	}
+	.showcase .showcase-note p {
+		margin: 0 0 1.5em;
 	}
 }
 
