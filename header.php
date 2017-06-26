@@ -26,26 +26,31 @@
 
 	<header id="mainheader" class="site-header top-position <?php if(is_front_page) echo 'is-front-page'; ?>">
 		<nav class="wrapper-big site-nav clearfix">
-
-			<button class="mobile-element mobile-menu hide-for-large-only"><i class="fa fa-bars" aria-hidden="true"></i></button>
 			
+			<!-- Mobile Menu Button -->
+			<button class="mobile-element mobile-menu hide-for-large"><i class="fa fa-bars" aria-hidden="true"></i></button>
+			
+			<!-- Logo -->
 			<div class="logo-container">
 				<a href="<?php echo home_url(); ?>" class="logo-link">
 					<img src="<?php echo get_template_directory_uri()."/assets/images/amzrocket-white-red-s.png" ?>" alt="AMZ Rocket" class="logo-main" title="AMZ Rocket">
 				</a>
 			</div>
-
-			<div class="contact-info-container show-for-large-only">
+			
+			<!-- Info -->
+			<div class="contact-info-container show-for-large">
 				<span class="contact-phone contact-info"><a href="tel:+4911122233344"><i class="fa fa-phone" aria-hidden="true"></i> +49 111 222 333 44</a></span>
 				<span class="contact-email contact-info"><a href="mailto:anfrage@amz-rocket.de"><i class="fa fa-envelope" aria-hidden="true"></i> Anfrage</a></span>
 			</div><br/>
-
-			<div class="menu-container show-for-large-only">
+			
+			<!-- Main Header Menu -->
+			<div class="menu-container show-for-large">
 				<?php
 				wp_nav_menu( array( 'theme_location' => 'main-header', 'menu_id' => 'main-nav-menu', 'depth' => '2' ) );
 				?>
 			</div>
 
+			<!-- Main Mobile Menu -->
 		</nav>
 	</header>
 
