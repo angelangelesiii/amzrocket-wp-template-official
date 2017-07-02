@@ -92,6 +92,8 @@ get_header(); ?>
 
 			<?php get_template_part('modules/fp-packages'); ?>
 
+			<?php get_template_part('modules/fp-newsletter'); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
