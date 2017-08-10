@@ -17,12 +17,31 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<section class="hero-section">
+			<section class="hero-section" style="background-image: url('<?php 
+			// echo background url for hero section
+			if (get_field('general_background_image','options')) :
+				echo get_field('general_background_image','options');
+			else:
+				echo get_template_directory_uri().'/assets/images/amzbg_b.jpg';
+			endif;
+
+			?>');">
 				<div class="spacer"></div>
 				<div class="hero-content wrapper">
-					<h1 class="headline">Skyrocket your sales now!</h1>
-					<p class="subline">Join the hundreds of customers who doubled their sales.</p>
-					<a href="#" class="btn">Optimize Now!</a>
+				<?php 
+				// Healine content
+				$fpHeadline = 'Skyrocket your sales now!';
+				$fpSubtext = 'You can edit this section under admin > site options > Hero Section';
+				$fpBtnText = 'Button Text';
+				$fpBtnURL = '#';
+				if (get_field('fp_headline','options')) $fpHeadline = get_field('fp_headline','options');
+				if (get_field('fp_subtext','options')) $fpSubtext = get_field('fp_subtext','options');
+				if (get_field('fp_btn_text','options')) $fpBtnText = get_field('fp_btn_text','options');
+				if (get_field('fp_btn_url','options')) $fpBtnURL = get_field('fp_btn_url','options');
+				?>
+					<h1 class="headline"><?php echo $fpHeadline ?></h1>
+					<p class="subline"><?php echo $fpSubtext ?></p>
+					<a href="<?php echo $fpBtnURL ?>" class="btn"><?php echo $fpBtnText ?></a>
 				</div>
 			</section>
 
@@ -31,57 +50,137 @@ get_header(); ?>
 					<h2>Launch <span style="color: #E80027;">higher</span> today!</h2>
 					<p class="subline">Our steps are way simpler and efficient than the competition.</p>
 					<div class="row">
+						
+						<!-- Column 1 -->
 						<div class="column medium-4 small-12 icon icon-1">
+						<?php // Icon for column 1
+						if (get_field('item_1_icon','options')): ?>
+							<img src="<?php the_field('item_1_icon','options'); ?>" alt="" class="icon">
+						<?php else: ?>
 							<i class="fa fa-list-ol" aria-hidden="true"></i>
-							<h3>Listing Optimization</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non nisi iste, molestiae ipsa aperiam veniam.</p>
+						<?php endif; ?>
+						<?php // Title for column 1 
+						if (get_field('item_1_title','options')): ?>
+							<h3><?php the_field('item_1_title','options'); ?></h3>
+						<?php else: ?>
+							<h3>Title for Icon 1</h3>
+						<?php endif; ?>
+						<?php // Text for column 1 
+						if (get_field('item_1_text','options')): ?>
+							<p><?php the_field('item_1_text','options'); ?></p>
+						<?php else: ?>
+							<p>Please change this text under admin > site options > Info Section.</p>
+						<?php endif; ?>
 						</div>
-						<div class="column medium-4 small-12 icon icon-2">
+
+						<!-- Column 2 -->
+						<div class="column medium-4 small-12 icon icon-1">
+						<?php // Icon for column 2
+						if (get_field('item_2_icon','options')): ?>
+							<img src="<?php the_field('item_2_icon','options'); ?>" alt="" class="icon">
+						<?php else: ?>
 							<i class="fa fa-amazon" aria-hidden="true"></i>
-							<h3>Amazon PPC</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat qui incidunt ab sequi sit laborum ratione magnam consequatur!</p>
+						<?php endif; ?>
+						<?php // Title for column 2
+						if (get_field('item_2_title','options')): ?>
+							<h3><?php the_field('item_2_title','options'); ?></h3>
+						<?php else: ?>
+							<h3>Title for Icon 2</h3>
+						<?php endif; ?>
+						<?php // Text for column 2
+						if (get_field('item_2_text','options')): ?>
+							<p><?php the_field('item_2_text','options'); ?></p>
+						<?php else: ?>
+							<p>Please change this text under admin > site options > Info Section.</p>
+						<?php endif; ?>
 						</div>
-						<div class="column medium-4 small-12 icon icon-3">
+
+						<!-- Column 3 -->
+						<div class="column medium-4 small-12 icon icon-1">
+						<?php // Icon for column 3
+						if (get_field('item_3_icon','options')): ?>
+							<img src="<?php the_field('item_3_icon','options'); ?>" alt="" class="icon">
+						<?php else: ?>
 							<i class="fa fa-search-plus" aria-hidden="true"></i>
-							<h3>Amazon SEO</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum est rerum, delectus.</p>
+						<?php endif; ?>
+						<?php // Title for column 3
+						if (get_field('item_3_title','options')): ?>
+							<h3><?php the_field('item_3_title','options'); ?></h3>
+						<?php else: ?>
+							<h3>Title for Icon 2</h3>
+						<?php endif; ?>
+						<?php // Text for column 3
+						if (get_field('item_3_text','options')): ?>
+							<p><?php the_field('item_3_text','options'); ?></p>
+						<?php else: ?>
+							<p>Please change this text under admin > site options > Info Section.</p>
+						<?php endif; ?>
 						</div>
+
 					</div>
 				</div>
 			</section>
 
 			<section class="half-columns">
+
+				<?php 
+				// Half row variables
+				$Section1Title = 'Row 1 Title';
+				$Section1Image = get_template_directory_uri().'/assets/images/1.jpg';
+				$Section1Text = 'You can change the text of this section under admin > site options >  Info Section. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ipsum iusto quibusdam, natus quos deserunt quasi veritatis consectetur magnam eligendi!';
+				$Section2Title = 'Row 2 Title';
+				$Section2Image = get_template_directory_uri().'/assets/images/2.jpg';
+				$Section2Text = 'You can change the text of this section under admin > site options >  Info Section. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ipsum iusto quibusdam, natus quos deserunt quasi veritatis consectetur magnam eligendi!';
+				$Section3Title = 'Row 3 Title';
+				$Section3Image = get_template_directory_uri().'/assets/images/3.jpg';
+				$Section3Text = 'You can change the text of this section under admin > site options >  Info Section. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ipsum iusto quibusdam, natus quos deserunt quasi veritatis consectetur magnam eligendi!';
+
+				// Conditionals
+				if (get_field('section_1_title','options')) $Section1Title = get_field('section_1_title','options');
+				if (get_field('section_1_image','options')) $Section1Image = get_field('section_1_image','options');
+				if (get_field('section_1_text','options')) $Section1Text = get_field('section_1_text','options');
+
+				if (get_field('section_2_title','options')) $Section2Title = get_field('section_2_title','options');
+				if (get_field('section_2_image','options')) $Section2Image = get_field('section_2_image','options');
+				if (get_field('section_2_text','options')) $Section2Text = get_field('section_2_text','options');
+
+				if (get_field('section_3_title','options')) $Section3Title = get_field('section_3_title','options');
+				if (get_field('section_3_image','options')) $Section3Image = get_field('section_3_image','options');
+				if (get_field('section_3_text','options')) $Section3Text = get_field('section_3_text','options');
+				?>
+
 				<table class="half-columns-table">
 					<tr class="row first-row half-column-row collapse">
-						<td class="column image" style="background: url('<?php echo get_template_directory_uri().'/assets/images/1.jpg' ?>');">
+
+						<td class="column image" style="background: url('<?php echo $Section1Image ?>');">
 							
 						</td>
 						<td class="column text">
 							<div class="content">
-								<h2>Listing Optimization</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ut tempora voluptatem odit sit adipisci ipsam, ex modi nostrum cupiditate quae labore, quisquam sunt quod necessitatibus omnis.</p>
+								<h2><?php echo $Section1Title ?></h2>
+								<p><?php echo $Section1Text ?></p>
 							</div>
 						</td>
 					</tr>
 					<tr class="row second-row half-column-row collapse">
 						<td class="column text">
 							<div class="content">
-								<h2>Amazon PPC</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi possimus voluptates recusandae non id accusamus, sapiente, commodi numquam nemo nisi tempore laborum voluptas maxime. Earum ratione nam alias a soluta magnam at eaque, doloribus quidem repellat, molestias harum porro repudiandae?</p>
+								<h2><?php echo $Section2Title ?></h2>
+								<p><?php echo $Section2Text ?></p>
 							</div>
 						</td>
-						<td class="column image" style="background: url('<?php echo get_template_directory_uri().'/assets/images/2.jpg' ?>');">
+						<td class="column image" style="background: url('<?php echo $Section2Image ?>');">
 							
 						</td>
 					</tr>
 					<tr class="row third-row half-column-row collapse">
-						<td class="column image" style="background: url('<?php echo get_template_directory_uri().'/assets/images/3.jpg' ?>');">
+						<td class="column image" style="background: url('<?php echo $Section3Image ?>');">
 							
 						</td>
 						<td class="column text">
 							<div class="content">
-								<h2>Amazon SEO</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo odio eligendi cupiditate harum possimus qui saepe itaque deleniti cumque, sapiente fugiat modi tempora laudantium necessitatibus natus rerum facere inventore aspernatur, facilis.</p>
+								<h2><?php echo $Section3Title ?></h2>
+								<p><?php echo $Section3Text ?></p>
 							</div>
 						</td>
 					</tr>
